@@ -1,15 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
-    background: rgb(221,224,231);
-    margin: auto;
-    display:flex;
-    justify-content: center;
-    place-items: center;
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-}
-.app-container-all {
-    display: flex;
-    flex-direction: row;
-    gap: 2em 4em;
 }
