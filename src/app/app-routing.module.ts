@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { TeamComponent } from './team/team.component';
 import { DashboardComponent } from './containers/dashboard/dashboard.component';
 import { AuthComponent } from './containers/auth/auth.component';
+import { PatientComponent } from './containers/patient/patient.component';
 
 const routes: Routes = [
   {
@@ -11,9 +12,12 @@ const routes: Routes = [
   {
    path: 'auth', component: AuthComponent 
   },
- {
-   path: 'dashboard', component: DashboardComponent 
- }
+  {
+  path: 'dashboard-page', component: DashboardComponent 
+  },
+  {
+    path: 'patient-page', component: PatientComponent
+  }
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
