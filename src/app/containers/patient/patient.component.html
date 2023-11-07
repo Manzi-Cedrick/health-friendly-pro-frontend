@@ -1,0 +1,110 @@
+<main class="flex flex-row justify-start">
+  <app-sidebar></app-sidebar>
+  <div class="w-full bg-gray-50">
+    <app-header></app-header>
+    <div class="px-10 py-8">
+      <span class="text-md font-light">Recent Analytics</span>
+      <div class="relative overflow-x-auto mt-6 shadow-md sm:rounded-lg">
+        <table class="w-full text-sm text-left text-gray-500">
+          <thead class="text-xs text-gray-500 uppercase bg-white">
+            <tr>
+              <th scope="col" class="p-4">
+                <div class="flex items-center">
+                  <input
+                    id="checkbox-all-search"
+                    type="checkbox"
+                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-primary focus:ring-2 dark:bg-gray-700"
+                  />
+                  <label for="checkbox-all-search" class="sr-only"
+                    >checkbox</label
+                  >
+                </div>
+              </th>
+              <th scope="col" class="px-6 py-3">Patient name</th>
+              <th scope="col" class="px-6 py-3">Email</th>
+              <th scope="col" class="px-6 py-3">Frequent Disease</th>
+              <th scope="col" class="px-6 py-3">Vitals</th>
+              <th scope="col" class="px-6 py-3">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="bg-white border-b hover:bg-gray-50">
+              <td class="w-4 p-4">
+                <div class="flex items-center">
+                  <input
+                    id="checkbox-table-search-1"
+                    type="checkbox"
+                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-primary focus:ring-2"
+                  />
+                  <label for="checkbox-table-search-1" class="sr-only"
+                    >checkbox</label
+                  >
+                </div>
+              </td>
+              <th
+                scope="row"
+                class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
+              >
+                Karemera Jean Bosco
+              </th>
+              <td class="px-6 py-4">boscojd@gmail.com</td>
+              <td class="px-6 py-4">High fever</td>
+              <td class="px-6 py-4">32 T,120 Hg</td>
+              <td class="px-6 py-4">
+                <a href="#" class="font-medium text-primary hover:underline"
+                  >Edit</a
+                >
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <nav
+          class="flex items-center justify-between p-4"
+          aria-label="Table navigation"
+        >
+          <span class="text-sm font-normal text-gray-500"
+            >Showing <span class="font-semibold text-gray-900">1-10</span> of
+            <span class="font-semibold text-gray-900">40</span></span
+          >
+          <ul class="inline-flex -space-x-px text-sm h-8">
+            <li
+              class="flex items-center justify-center px-3 h-8 ml-0 leading-tight text-gray-500 bg-white border border-gray-300 rounded-l-lg hover:bg-gray-100 hover:text-gray-700"
+            >
+              Previous
+            </li>
+            <li
+              class="flex items-center justify-center px-3 h-8 leading-tight text-primary bg-blue-50 border border-gray-300 hover:bg-gray-100 hover:text-gray-700"
+            >
+              1
+            </li>
+            <li
+              class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700"
+            >
+              2
+            </li>
+            <li
+              class="flex items-center justify-center px-3 h-8 text-gray-500 border border-gray-300 bg-white hover:bg-gray-100 hover:text-gray-700"
+            >
+              3
+            </li>
+            <li
+              class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700"
+            >
+              4
+            </li>
+            <li
+              class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700"
+            >
+              5
+            </li>
+            <li
+              class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 rounded-r-lg hover:bg-gray-100 hover:text-gray-700"
+            >
+              Next
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</main>
