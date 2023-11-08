@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ChartService } from 'src/app/charts-info/chart.service';
-import { IUser } from 'src/app/interface/memberType';
+import { IUser } from 'src/app/interface/types';
 
 @Component({
   selector: 'app-table-patient',
