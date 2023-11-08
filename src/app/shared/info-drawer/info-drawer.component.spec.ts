@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TeamComponent } from './team.component';
+import { InfoDrawerComponent } from './info-drawer.component';
 
-describe('TeamComponent', () => {
-  let component: TeamComponent;
-  let fixture: ComponentFixture<TeamComponent>;
+describe('InfoDrawerComponent', () => {
+  let component: InfoDrawerComponent;
+  let fixture: ComponentFixture<InfoDrawerComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TeamComponent ]
+      declarations: [ InfoDrawerComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(TeamComponent);
+    fixture = TestBed.createComponent(InfoDrawerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

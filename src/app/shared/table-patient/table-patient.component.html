@@ -1,0 +1,122 @@
+<div class="relative overflow-auto mt-6 flex-col gap-y-8 flex">
+  <div class="shadow-md sm:rounded-lg">
+    <table class="w-full text-sm text-left text-gray-500">
+      <thead class="text-xs text-gray-500 uppercase bg-white">
+        <tr>
+          <th scope="col" class="p-4">
+            <div class="flex items-center">
+              <input
+                id="checkbox-all-search"
+                type="checkbox"
+                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-primary focus:ring-2 dark:bg-gray-700"
+              />
+              <label for="checkbox-all-search" class="sr-only">checkbox</label>
+            </div>
+          </th>
+          <th scope="col" class="px-6 py-3">Patient name</th>
+          <th scope="col" class="px-6 py-3">Email</th>
+          <th scope="col" class="px-6 py-3">Frequent Disease</th>
+          <th scope="colgroup" class="px-6 py-3">Vitals</th>
+          <th scope="col" class="px-6 py-3">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          *ngFor="let data of paginatedData"
+          class="bg-white border-b hover:bg-gray-50"
+        >
+          <td class="w-4 p-4">
+            <div class="flex items-center">
+              <input
+                id="checkbox-table-search-1"
+                type="checkbox"
+                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-primary focus:ring-2"
+              />
+              <label for="checkbox-table-search-1" class="sr-only"
+                >checkbox</label
+              >
+            </div>
+          </td>
+          <th
+            scope="row"
+            class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
+          >
+            {{ data?.username }}
+          </th>
+          <td class="px-6 py-4">{{ data?.email }}</td>
+          <td class="px-6 py-4">{{ data?.frequentDisease }}</td>
+          <td class="px-6 py-4">
+            <ng-container
+              *ngIf="data?.temperature && data.temperature.length > 0"
+            >
+              {{ data?.temperature[data.temperature.length - 1] }} C
+              {{ data?.heartRate[data.heartRate.length - 1] }} Hg
+            </ng-container>
+          </td>
+          <td class="px-6 py-4">
+            <button
+              href="javascript:void(0)"
+              (click)="showInfoDrawer(data)"
+              [ngClass]="{
+                'text-gray-500': selectedUsername === data?.username,
+                'text-primary': selectedUsername !== data?.username
+              }"
+              class="font-medium hover:underline"
+            >
+              {{
+                selectedUsername === data.username
+                  ? "Close Graph"
+                  : "Show Graph"
+              }}
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <nav
+      class="flex items-center justify-between p-4"
+      aria-label="Table navigation"
+    >
+      <span class="text-sm font-normal text-gray-500">
+        Showing
+        <span class="font-semibold text-gray-900">
+          {{ (currentPage - 1) * itemsPerPage + 1 }}
+        </span>
+        -
+        <span class="font-semibold text-gray-900">
+          {{ (currentPage - 1) * itemsPerPage + paginatedData.length }}
+        </span>
+        of
+        <span class="font-semibold text-gray-900">{{ dataInfo.length }}</span>
+      </span>
+      <ul class="inline-flex -space-x-px text-sm h-8">
+        <li
+          class="flex items-center justify-center px-3 h-8 ml-0 leading-tight text-gray-500 bg-white border border-gray-300 rounded-l-lg hover:bg-gray-100 hover-text-gray-700"
+          [class.opacity-50]="currentPage === 1"
+          (click)="currentPage = currentPage - 1"
+        >
+          Previous
+        </li>
+        <li
+          class="flex items-center justify-center px-3 h-8 leading-tight text-primary bg-blue-50 border border-gray-300 hover-bg-gray-100 hover-text-gray-700"
+          *ngFor="let page of getPageNumbers()"
+          [class.active]="currentPage === page"
+          (click)="currentPage = page"
+        >
+          {{ page }}
+        </li>
+        <li
+          class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover-bg-gray-100 hover-text-gray-700"
+          [class.opacity-50]="currentPage === totalPages"
+          (click)="currentPage = currentPage + 1"
+        >
+          Next
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <app-info-drawer
+    [chartInfo]="selectedUserData"
+    *ngIf="selectedUserData"
+  ></app-info-drawer>
+</div>
