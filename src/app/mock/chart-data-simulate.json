@@ -1,0 +1,24 @@
+{
+    "info": [
+      {
+        "temperature": 32,
+        "heart-rate": 78,
+        "date": "12/03/2023"
+      },
+      {
+        "temperature": 30,
+        "heart-rate": 70,
+        "date": "12/03/2023"
+      },
+      {
+        "temperature": 22,
+        "heart-rate": 18,
+        "date": "12/03/2023"
+      },
+      {
+        "temperature": 12,
+        "heart-rate": 18,
+        "date": "12/03/2023"
+      }
+    ]
+  }
