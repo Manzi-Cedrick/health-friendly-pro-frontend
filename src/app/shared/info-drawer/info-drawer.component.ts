@@ -1,8 +1,6 @@
-import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Chart } from 'chart.js/auto';
-import { ChartService } from 'src/app/charts-info/chart.service';
-import { SidebarComponent } from '../sidebar/sidebar.component';
-import { IUser } from 'src/app/interface/memberType';
+import { IUser } from 'src/app/interface/types';
 
 @Component({
   selector: 'app-info-drawer',
