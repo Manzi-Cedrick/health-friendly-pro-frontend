@@ -1,24 +1,36 @@
 {
-    "info": [
-      {
-        "temperature": 32,
-        "heart-rate": 78,
-        "date": "12/03/2023"
-      },
-      {
-        "temperature": 30,
-        "heart-rate": 70,
-        "date": "12/03/2023"
-      },
-      {
-        "temperature": 22,
-        "heart-rate": 18,
-        "date": "12/03/2023"
-      },
-      {
-        "temperature": 12,
-        "heart-rate": 18,
-        "date": "12/03/2023"
-      }
-    ]
-  }
+  "info": [
+    {
+      "username": "Manzi",
+      "temperature": [1.4,2.3,4.5,6.7,8.9],
+      "heartRate": [67.2,34.5,56.7,78.9,90.1],
+      "date": "12/03/2023",
+      "email": "manzicedrick@gmail.com",
+      "frequentDisease": "High Fever"
+    },
+    {
+      "username": "Cedrick",
+      "temperature": [30,23,45,67,89],
+      "heartRate": [12,34,56,78,90],
+      "date": "12/03/2023",
+      "email": "cedrickmanzii01@gmail.com",
+      "frequentDisease": "High Fever"
+    },
+    {
+      "username": "Mico",
+      "temperature": [21.4,22.3,24.5,26.7,28.9],
+      "heartRate": [65,35,55,75,95],
+      "date": "12/03/2023",
+      "email": "micothebest@gmail.com",
+      "frequentDisease": "High Fever"
+    },
+    {
+      "username": "Sydney",
+      "temperature": [85.1,74.2,63.3,52.4,41.5],
+      "heartRate": [100.2,110.3,120.4,120.5,125],
+      "date": "12/03/2023",
+      "email": "sydneymax10@gmail.com",
+      "frequentDisease": " High Fever"
+    }
+  ]
+}
