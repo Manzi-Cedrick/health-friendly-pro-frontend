@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './containers/dashboard/dashboard.component';
 import { AuthComponent } from './containers/auth/auth.component';
-import { PatientComponent } from './containers/patient/patient.component';
 
 const routes: Routes = [
   {
@@ -13,9 +12,6 @@ const routes: Routes = [
   },
   {
   path: 'dashboard-page', component: DashboardComponent 
-  },
-  {
-    path: 'patient-page', component: PatientComponent
   }
 ];
 @NgModule({
